@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593315367526608099}
+  - component: {fileID: -8842857211150738438}
   m_Layer: 0
   m_Name: SquarePrefab
   m_TagString: Untagged
@@ -32,6 +33,20 @@ Transform:
   - {fileID: 363757249060346586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-8842857211150738438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419923431571416363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456f890062ce442a8b3c8c79868222f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rank: 0
+  file: 0
 --- !u!1 &8608589170869192968
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +58,7 @@ GameObject:
   - component: {fileID: 363757249060346586}
   - component: {fileID: 2835160017744865385}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
