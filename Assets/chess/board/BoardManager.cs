@@ -7,7 +7,7 @@ public class BoardComponent : MonoBehaviour
     [SerializeField]
     private GameObject squarePrefab;
 
-    void Start()
+    private void Awake()
     {
         DestroySquares();
         InitializeSquares();
@@ -15,7 +15,7 @@ public class BoardComponent : MonoBehaviour
 
     private string squaresParentName = "Squares";
 
-    void DestroySquares()
+    private void DestroySquares()
     {
         foreach (Transform child in transform)
         {
@@ -26,7 +26,7 @@ public class BoardComponent : MonoBehaviour
         }
     }
 
-    void InitializeSquares()
+    private void InitializeSquares()
     {
         float offset = 3.5f;
 
@@ -50,5 +50,20 @@ public class BoardComponent : MonoBehaviour
                 squareComponent.file = file;
             }
         }
+    }
+
+    public SquareComponent GetSquare(File file, Rank rank)
+    {
+        var squares = transform.Find(squaresParentName);
+        foreach (Transform square in squares)
+        {
+            SquareComponent squareComponent = square.GetComponent<SquareComponent>();
+            if (squareComponent.file == file && squareComponent.rank == rank)
+            {
+                return squareComponent;
+            }
+        }
+
+        return null;
     }
 }

@@ -9,7 +9,7 @@ public class SquareComponent : MonoBehaviour
     [SerializeField]
     public File file;
 
-    void Start()
+    private void Start()
     {
         SetBackgroundColor();
     }

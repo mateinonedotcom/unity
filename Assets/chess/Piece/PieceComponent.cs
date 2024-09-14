@@ -11,15 +11,15 @@ public class PieceComponent : MonoBehaviour
 
     private void Start()
     {
-        SetIcon();
+        InitializeIcon();
     }
 
     private void OnValidate()
     {
-        SetIcon();
+        InitializeIcon();
     }
 
-    void SetIcon()
+    public void InitializeIcon()
     {
         string resourceName = pieceType.ToString().ToLower();
         Sprite sprite = Resources.Load<Sprite>(resourceName);
