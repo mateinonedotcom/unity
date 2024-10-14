@@ -40,7 +40,7 @@ public class BoardComponent : MonoBehaviour
             {
                 File file = (File)y;
 
-                Vector3 position = new Vector3((int)rank - offset, (int)file - offset, 0);
+                Vector3 position = new Vector3((int)file - offset, (int)rank - offset, 0);
 
                 GameObject square = Instantiate(squarePrefab, position, Quaternion.identity);
                 square.transform.SetParent(squares.transform);
