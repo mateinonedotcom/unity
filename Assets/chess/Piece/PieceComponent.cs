@@ -26,6 +26,6 @@ public class PieceComponent : MonoBehaviour
 
         var spriteRenderer = transform.Find("Icon").GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprite;
-        spriteRenderer.color = pieceColor == PieceColor.White ? Color.white : Color.black;
+        spriteRenderer.color = pieceColor == PieceColor.White ? Color.cyan : Color.magenta;
     }
 }
